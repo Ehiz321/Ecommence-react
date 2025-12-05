@@ -25,11 +25,26 @@ export default {
         'brown': {
           'light': '#C69B7B',
           'dark' : '#826F66',
-        }
+        },
+        
+        'checkbox': {
+          'green': '#CCD8CE',
+          'gray': '#D1D5DB',
+          'red': '#B4555D',
+          'violet': '#9B92A1',
+          'orange': '#C88242',
+          'darkblue': '#212F39',
+          'peach': '#DCB9A8',
+          'pink': '#D67D91',
+          'ashblue': '#758EBD',
+        },
+
       },
-      fontFamily: {
-        sans: ['Inter'],
-      },
+        fontFamily: {
+          garamond: ['EB Garamond', 'serif'],
+          sans: ['Inter'],
+        },
+
     },
   },
   plugins: [],

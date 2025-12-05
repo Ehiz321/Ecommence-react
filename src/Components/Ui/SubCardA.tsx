@@ -1,14 +1,13 @@
-import Button from "./Button";
 import useMediaQuery from "../../hooks/useMediaquery"
 
-export interface SubCardProps {
+export interface SubCardAProps {
   title: string;
   description: string;
   imageUrl?: string;
   children?: React.ReactNode;
 };
 
-const SubCard: React.FC<SubCardProps> = ({ title, imageUrl, description, children }) => {
+const SubCardA: React.FC<SubCardAProps> = ({ title, imageUrl, description, children }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
   return (
     <div>
@@ -20,26 +19,22 @@ const SubCard: React.FC<SubCardProps> = ({ title, imageUrl, description, childre
                 <h1 className="text-[28px] font-bold font-[garamond] text-text-primary tracking-[.30rem]">{title}</h1>
                 <p className="text-[16px] text-text-secondary">{description}</p>
               </div>
-              <Button type="secondary">LEARN MORE</Button>
             </div> 
       
-            {imageUrl && <img className="w-[555px] h-[400px] " src={imageUrl} alt={title} />}
+            {imageUrl && <img className="w-[555px] h-[348px] " src={imageUrl} alt={title} />}
 
             {children && <div className="px-6 pt-4 pb-2">{children}</div>}
           </div>
         </div>
       ):(
         <div>
-          <div className="bg-background-secondary h-[600px]">
-            <div className=" h-[300px] flex flex-col items-center justify-center">
-              <div className="text-center flex flex-col p-[40px] -mt-[30px]">
-                <h1 className="text-[28px] font-bold font-[garamond] text-text-primary tracking-[0.04rem]">{title}</h1>
-                <p className="text-[16px] text-text-secondary">{description}</p>
-              </div>
-              <Button type="secondary" size="none">LEARN MORE</Button> 
-            </div> 
-      
+          <div className="bg-background-secondary h-[560px]">
             {imageUrl && <img className="w-full h-[300px]" src={imageUrl} alt={title} />}
+            <div className=" h-[260px] py-[40px] px-[48px] text-center">
+                <h1 className="text-[28px] font-bold text-text-primary tracking-[0.04rem] font-[garamond]">{title}</h1>
+                <div className="size-[24px]"></div>
+                <p className=" text-text-secondary">{description}</p>
+            </div>
 
             {children && <div className="px-6 pt-4 pb-2">{children}</div>}
           </div>
@@ -50,4 +45,4 @@ const SubCard: React.FC<SubCardProps> = ({ title, imageUrl, description, childre
   );
 };
 
-export default SubCard;
+export default SubCardA;

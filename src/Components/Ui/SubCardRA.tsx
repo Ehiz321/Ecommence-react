@@ -1,5 +1,3 @@
-import Button from "./Button";
-
 export interface SubCardRProps {
   title: string;
   description: string;
@@ -17,7 +15,6 @@ const SubCardR: React.FC<SubCardRProps> = ({ title, imageUrl, description, child
                 <h1 className="text-[28px] font-bold font-[garamond] text-text-primary tracking-[.30rem]">{title}</h1>
                 <p className="text-[16px] text-text-secondary">{description}</p>
               </div>
-              <Button type="secondary">LEARN MORE</Button>
             </div> 
 
             {children && <div className="px-6 pt-4 pb-2">{children}</div>}

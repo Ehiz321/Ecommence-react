@@ -1,5 +1,5 @@
 import FootLink from "./FootLink.tsx"
-import logow from "../../assets/Icons/logow.png"
+import logowhite from "../../assets/Icons/logowhite.png"
 import arrowright from "../../assets/Icons/arrowright.png"
 import Button from "../Ui/Button.tsx"
 
@@ -14,15 +14,15 @@ const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <nav>
       {isAboveMediumScreens ? (
-      <div className="bg-text-primary">
-        <div className="text-text-quaternary flex px-[80px] h-[318px] border-b-2 mx-[104px]">
+      <div className="bg-text-primary w-[1440px]">
+        <div className="text-text-quaternary flex px-[80px] h-[318px] border-b-[1px] mx-[165px]">
             <div className={ `${col} gap-[32px] w-[300px] my-[50px] mr-[50px]`}>
-                <img src={logow} alt="logo" className=" w-[145px]" />
+                <img src={logowhite} alt="logo" className=" w-[145px]" />
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam</p>
                 <Button type="footer" size="foot" ><span className="flex">GET STARTED <img src={arrowright} className="size-[9px] mt-[5px] ml-[3px]"/></span></Button>
             </div>
-            <div  className= {`${flexBetween} border-l-2 w-[486px] pl-[75px]`}>
-                <div className={`${col} gap-[32px]`}>
+            <div  className= {`${flexBetween} border-l-[1px] w-[486px] pl-[75px]`}>
+                <div className={`${col} gap-[32px] `}>
                   <div>
                     <FootLink heading="ABOUT US" label="" to="/" />
                   </div>
@@ -74,19 +74,20 @@ const Footer: React.FC<FooterProps> = ({}) => {
         </div>
       </div>
       ) :(
-        <div className="bg-text-primary p-[20px]">
-          <div className="text-text-quaternary grid grid-rows-1">
-            <div className={`${col} gap-[32px] border-b-2 pb-[40px]`}>
-                <img src={logow} alt="logo" className=" w-[145px]" />
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma</p>
+        <div className="bg-text-primary w-[430px] px-[20px] pt-[30px]">
+          <div className="text-text-quaternary grid grid-rows-1 gap-[30px] w-[390px]">
+            <div className={`${col} w-[303.45px] h-[199.33px] gap-[30px] `}>
+                <img src={logowhite} alt="logo" className=" w-[145px] h-[38.33px]" />
+                <p className="text-[14px]">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma</p>
                 <Button type="footer" size="foot" ><span className="flex">GET STARTED <img src={arrowright} className="size-[9px] mt-[5px] ml-[3px]"/></span></Button>
             </div>
-            <div  className="grid grid-cols-2 border-b-2 pb-[40px]">
-                <div className={`${col} gap-[20px] mt-[40px]`}>
+            <hr />
+            <div  className="grid grid-cols-2 gap-[30px]">
+                <div className={`${col} gap-[30px]`}>
                   <div>
                     <FootLink heading="ABOUT US" label="" to="/" />
                   </div>
-                  <div className={`${col} gap-[6px]`}>
+                  <div className={`${col} gap-[24px]`}>
                     <FootLink heading="" label="Mission" to="/" />
                     <FootLink heading="" label="Our team" to="/" />
                     <FootLink heading="" label="Awards" to="/" />
@@ -96,11 +97,11 @@ const Footer: React.FC<FooterProps> = ({}) => {
                     
                     
                 </div>
-                <div className={`${col} gap-[20px] mt-[40px]`}>
+                <div className={`${col} gap-[30px]`}>
                   <div>
                     <FootLink heading="SERVICES" label="" to="/" />
                   </div>
-                  <div className={`${col} gap-[6px]`}>
+                  <div className={`${col} gap-[24px]`}>
                     <FootLink heading="" label="Web design" to="/" />
                     <FootLink heading="" label="Web development" to="/" />
                     <FootLink heading="" label="Mobile design" to="/" />
@@ -110,11 +111,11 @@ const Footer: React.FC<FooterProps> = ({}) => {
                     
                     
                 </div>
-                <div className={`${col} gap-[20px] mt-[40px]`}>
+                <div className={`${col} gap-[30px]`}>
                   <div>
                     <FootLink heading="PORTFOLIO" label="" to="/" />
                   </div>
-                  <div className={`${col} gap-[6px]`}>
+                  <div className={`${col} gap-[24px]`}>
                     <FootLink heading="" label="Corporate websites" to="/" />
                     <FootLink heading="" label="E-commerce" to="/" />
                     <FootLink heading="" label="Mobile apps" to="/" />
@@ -125,6 +126,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
                     
                 </div>
             </div>
+            <hr />
         </div>
         <div className={`${col} p-[20px] justify-center items-center text-[16px]`}>
           <span className="text-text-quinary">Copyright &copy; 2023 Moon</span>
