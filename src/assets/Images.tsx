@@ -62,6 +62,7 @@ import instagram from "../assets/Icons/Instagram.png"
 import linkedin from "../assets/Icons/LinkedIn.png"
 import youtube from "../assets/Icons/YouTube.png"
 import arrowright from "../assets/Icons/arrowright.png"
+import logowhite from "../assets/Icons/logowhite.png"
 import filter from "../assets/Icons/Filters.png"
 import left from "../assets/Icons/chevronleft.png"
 import right from "../assets/Icons/chevronright.png"
@@ -176,4 +177,5 @@ export const icons ={
     paypal,
     radio,
     circle,
+    logowhite,
 }

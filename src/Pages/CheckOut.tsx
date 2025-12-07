@@ -41,7 +41,7 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                         <div className="flex flex-col gap-[12px]">
                           <label className="font-semibold text-[14px]">Country / Region *</label>
                           <input type="text" placeholder="United states" className="w-[323px] h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                          <img src={icons.down} className="absolute size-[15px] ml-[290px] mt-[50px]"/>
+                          <img src={icons.down} className="absolute h-[12px] ml-[290px] mt-[53px]"/>
                         </div>
                       </div>
 
@@ -57,7 +57,7 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                         <div className="flex flex-col gap-[12px]">
                           <label className="font-semibold text-[14px]">State *</label>
                           <input type="text" placeholder="State" className="w-[323px] h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                          <img src={icons.down} className="absolute size-[15px] ml-[290px] mt-[50px]"/>
+                          <img src={icons.down} className="absolute h-[12px] ml-[290px] mt-[53px]"/>
                         </div>
                       </div>
 
@@ -126,7 +126,7 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                         <span className="font-semibold text-[20px]">$490.00</span>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-[20px] p-[30px] bg-text-primary text-background-primary">
+                  <div className="flex flex-col gap-[10px] p-[30px] bg-text-primary text-background-primary">
                     <span className="font-semibold text-[20px] ">Payment</span>
                     <div className="flex justify-between items-center py-[20px] border-b border-background-primary">
                       <div className="flex gap-[12px]">
@@ -141,8 +141,10 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                     <div className="flex flex-col gap-[20px] py-[20px]">
                       <input type="text" placeholder="Card number" className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
                       <input type="text" placeholder="Name on card" className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
-                      <input type="text" placeholder="Expiration date (MM/YY)" className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
-                      <input type="text" placeholder="Security code" className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
+                      <div className="flex gap-[20px]">
+                        <input type="text" placeholder="Expiration date" className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
+                        <input type="text" placeholder="Security code" className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
+                      </div>
                     </div>
                     <div className="flex gap-[12px] py-[20px] w-full h-[64px] border-t border-background-primary">
                       <img src={icons.circle}/>
@@ -181,7 +183,7 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                     <div className="flex flex-col gap-[12px]">
                       <label className="font-semibold text-[14px]">Country / Region *</label>
                       <input type="text" placeholder="United states" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                      <img src={icons.down} className="absolute size-[15px] ml-[350px] mt-[50px]"/>
+                      <img src={icons.down} className="absolute h-[12px] ml-[350px] mt-[53px]"/>
                     </div>
                     <div className="flex flex-col gap-[12px]">
                       <label className="font-semibold text-[14px]">Street address *</label>
@@ -194,7 +196,7 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                     <div className="flex flex-col gap-[12px]">
                       <label className="font-semibold text-[14px]">State *</label>
                       <input type="text" placeholder="State" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                      <img src={icons.down} className="absolute size-[15px] ml-[350px] mt-[50px]"/>
+                      <img src={icons.down} className="absolute h-[12px] ml-[350px] mt-[53px]"/>
                     </div>
                     <div className="flex flex-col gap-[12px]">
                       <label className="font-semibold text-[14px]">ZIP Code</label>
@@ -258,7 +260,7 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                       <span className="font-semibold text-[20px]">$490.00</span>
                   </div>
                 </div>
-                <div className="flex flex-col gap-[20px] p-[30px] bg-text-primary text-background-primary">
+                <div className="flex flex-col gap-[10px] p-[30px] bg-text-primary text-background-primary">
                   <span className="font-semibold text-[20px] ">Payment</span>
                   <div className="flex justify-between items-center py-[20px] border-b border-background-primary">
                     <div className="flex gap-[12px]">
@@ -273,7 +275,7 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                   <div className="flex flex-col gap-[20px] py-[20px]">
                     <input type="text" placeholder="Card number" className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
                     <input type="text" placeholder="Name on card" className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
-                    <input type="text" placeholder="Expiration date (MM/YY)" className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
+                    <input type="text" placeholder="Expiration date " className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
                     <input type="text" placeholder="Security code" className="border border-background-primary bg-text-primary w-full h-[42px] px-[10px] placeholder:text-[14px] placeholder:text-text-quinary "/>
                   </div>
                   <div className="flex gap-[12px] py-[20px] w-full h-[64px] border-t border-background-primary">
