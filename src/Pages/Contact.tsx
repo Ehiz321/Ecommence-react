@@ -10,9 +10,10 @@ const Contact: React.FC<ContactProps> = ({}) => {
     return (
       <section>
         {isAboveMediumScreens ? (
-            <div className="w-[1440px]">
-                <div style={{ backgroundImage: `url(${images.cherryd})` }} className="h-[545px] px-[165px] flex flex-col gap-[10px]">
-                    <div className="bg-text-primary w-[420px] h-[545px] flex flex-col items-center justify-center gap-[42px]">
+            <div className="w-auto">
+                <div className="h-[545px] flex flex-col gap-[10px]">
+                    <img src={images.cherryd} className="w-full h-full"/>
+                    <div className="relative bg-text-primary w-[400px] h-full flex flex-col items-center justify-center gap-[42px] -mt-[555px] ml-[105px]">
                         <div><img src={icons.signbrown}/></div>
                         <div className="flex flex-col gap-[30px] text-text-title text-center">
                             <h1 className="text-[37px] font-bold font-[garamond] border-b-2 pb-[30px]">CONTACT US</h1>
@@ -51,7 +52,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
                     </div>
                 </div>
 
-                <div className="text-text-primary mb-[50px] mx-[165px]">
+                <div className="text-text-primary mb-[50px] mx-[105px]">
                     <div className="grid grid-cols-2 gap-[30px] mb-[30px] ">
                         <div>
                             <label htmlFor="Name" className="font-bold">Name</label>
@@ -78,7 +79,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
                     <Button type="tertiary" size="full" ><span className="flex justify-center">SEND MESSAGE <img src={icons.arrowright} className="size-[12px] mt-[5.5px] ml-[3px]"/></span></Button>
                 </div>
                 <div>
-                    <img src={images.mapd} alt="map" className="w-full" />
+                    <img src={images.mapd} alt="map" className="w-auto" />
                 </div>
 
                 

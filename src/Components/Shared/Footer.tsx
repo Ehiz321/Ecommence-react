@@ -11,66 +11,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <nav>
       {isAboveMediumScreens ? (
-      // <div className="bg-text-primary w-[1440px]">
-      //   <div className="text-text-quaternary flex px-[80px] h-[318px] border-b-[1px] mx-[165px]">
-      //       <div className="flex flex-col gap-[32px] w-[300px] my-[50px] mr-[50px]">
-      //           <img src={icons.logowhite} alt="logo" className=" w-[145px]" />
-      //           <p>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam</p>
-      //           <Button type="footer" size="foot" ><span className="flex">GET STARTED <img src={icons.arrowright} className="size-[9px] mt-[5px] ml-[3px]"/></span></Button>
-      //       </div>
-      //       <div  className="flex items-center justify-between border-l-[1px] w-[486px] pl-[75px]">
-      //           <div className="flex flex-col gap-[32px]">
-      //             <div>
-      //               <FootLink heading="ABOUT US" label="" to="/" />
-      //             </div>
-      //             <div className="flex flex-col gap-[9px]">
-      //               <FootLink heading="" label="Mission" to="/" />
-      //               <FootLink heading="" label="Our team" to="/" />
-      //               <FootLink heading="" label="Awards" to="/" />
-      //               <FootLink heading="" label="Testimonials" to="/" />
-      //               <FootLink heading="" label="Privacy policy" to="/" />
-      //             </div>
-                    
-                    
-      //           </div>
-      //           <div className="flex flex-col gap-[32px]">
-      //             <div>
-      //               <FootLink heading="SERVICES" label="" to="/" />
-      //             </div>
-      //             <div className="flex flex-col gap-[9px]">
-      //               <FootLink heading="" label="Web design" to="/" />
-      //               <FootLink heading="" label="Web development" to="/" />
-      //               <FootLink heading="" label="Mobile design" to="/" />
-      //               <FootLink heading="" label="UI/UX design" to="/" />
-      //               <FootLink heading="" label="Branding design" to="/" />
-      //             </div>
-                    
-                    
-      //           </div>
-      //           <div className="flex flex-col gap-[32px]">
-      //             <div>
-      //               <FootLink heading="PORTFOLIO" label="" to="/" />
-      //             </div>
-      //             <div className="flex flex-col gap-[9px]">
-      //               <FootLink heading="" label="Corporate websites" to="/" />
-      //               <FootLink heading="" label="E-commerce" to="/" />
-      //               <FootLink heading="" label="Mobile apps" to="/" />
-      //               <FootLink heading="" label="Landing pages" to="/" />
-      //               <FootLink heading="" label="UI/UX projects" to="/" />
-      //             </div>
-                    
-                    
-      //           </div>
-      //       </div>
-      //   </div>
-      //   <div className="p-[20px] text-center">
-      //     <span className="text-text-quinary">Copyright &copy; 2023 Moon| All Rights Reserved |
-      //       <span className="text-text-tertiary"><FootLink heading="" label="Terms and Conditions" to="/"></FootLink></span> |
-      //       <span className="text-text-tertiary"><FootLink heading="" label="Privacy Policy" to="/"></FootLink> </span>
-      //       </span>
-      //   </div>
-      // </div>
-      <div className="w-[1440px] px-[165px] bg-text-primary">
+      <div className="w-auto px-[105px] bg-text-primary">
         <div className="w-full flex justify-between px-[80px] text-text-quaternary">
           <div className="w-[303.45px] h-[215.33px]">
             <div className="size-[48px]"></div>

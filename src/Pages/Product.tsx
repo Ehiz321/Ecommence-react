@@ -1,4 +1,5 @@
 import { images, icons } from "../assets/Images.tsx"
+import { newArrivals } from "../Data/Data.tsx"
 import CartCard from "../Components/Ui/CartCard.tsx"
 import Button from "../Components/Ui/Button.tsx"
 import useMediaQuery from "../hooks/useMediaquery.ts"
@@ -11,7 +12,7 @@ const Product: React.FC<ProductProps> = ({}) => {
   return (
     <section>
       {isAboveMediumScreens ? ( 
-        <div className="w-[1440px] px-[165px]">
+        <div className="w-auto px-[105px]">
             <div>
                     <div className="flex gap-[15px] mt-[20px]">
                         <span className="text-text-tertiary">Home</span> 
@@ -20,9 +21,9 @@ const Product: React.FC<ProductProps> = ({}) => {
                         <span className="text-text-primary">/</span>
                         <span className="text-text-primary">Marin White Dinner Plate</span>
                     </div>
-                    <div className="grid grid-cols-2 gap-[88px] mt-[50px]">
+                    <div className="flex gap-[20px] mt-[50px]">
                         <div className="mb-[40px]">
-                            <img src={images.blue}  className="h-[701px] w-[535p] mb-[40px]"/>
+                            <img src={images.blue}  className="h-[701px] w-[512px] mb-[40px]"/>
                             <div className="flex size-[100px] w-[535px] gap-[3px]">
                                 <img src={images.blue1}  className=""/>
                                 <img src={images.blue2}  className=""/>
@@ -114,11 +115,16 @@ const Product: React.FC<ProductProps> = ({}) => {
                 
                 <div className="mb-[100px] mt-[30px]">
                     <span className="text-text-primary text-[37px] font-bold font-[garamond]">SIMILAR ITEMS</span>
-                    <div className="grid grid-cols-4 gap-[13px] mt-[20px]">
-                        <CartCard title="PORCELAIN DINNER PLATE" price="$49.00" description="Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit tortor eu." imageUrl={images.mari}></CartCard>
-                        <CartCard title="OPHELIA MATTE NATURAL  VASE" price="$70.00" description="Lorem ipsum dolor sit amet conse bolli tetur." imageUrl={images.valo}></CartCard>
-                        <CartCard title="PORCELAIN DINNER PLATE  VASE" price="$70.00" description="Lorem ipsum dolor sit amet conse bolli tetur." imageUrl={images.julo}></CartCard>
-                        <CartCard title="LUANA BOWL  VASE" price="$70.00" description="Lorem ipsum dolor sit amet conse bolli tetur." imageUrl={images.rimbowl}></CartCard>
+                    <div className="grid grid-cols-4 gap-[12px] mt-[20px]">
+                        {newArrivals.map((item, index) => (
+                            <CartCard
+                            key={index}
+                            title={item.title}
+                            price="$49.00"
+                            description="Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit."
+                            imageUrl={item.img}
+                            />
+                        ))}
                     </div>
                 </div>
         </div>
@@ -228,12 +234,21 @@ const Product: React.FC<ProductProps> = ({}) => {
                     </div>
                 </div>
                 
-                <div className="py-[60px] px-[20px]">
-                    <span className="text-text-primary text-[36px] font-bold font-[garamond]">SIMILAR ITEMS</span>
+                <div className="py-[60px] ">
+                    <span className="text-text-primary text-[36px] font-bold font-[garamond] px-[20px]">SIMILAR ITEMS</span>
                     <div className="size-[48px]"></div>
-                    <div className="grid grid-cols-2 gap-[30px]">
-                        <CartCard title="PORCELAIN DINNER PLATE" price="$49.00" description="Lorem ipsum dolor sit amet conse bolli tetur." imageUrl={images.mari}></CartCard>
-                        <CartCard title="OPHELIA MATTE NATURAL  VASE" price="$70.00" description="Lorem ipsum dolor sit amet conse bolli tetur." imageUrl={images.val}></CartCard>
+                    <div className="flex overflow-x-scroll scrollbar-hide px-[20px] ">
+                        <div className="flex gap-[30px] mt-[20px]">
+                            {newArrivals.map((item, index) => (
+                                <CartCard
+                                key={index}
+                                title={item.title}
+                                price="$49.00"
+                                description="Lorem ipsum dolor sit amet conse bolli tetur adipiscing elit."
+                                imageUrl={item.img}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

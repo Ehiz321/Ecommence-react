@@ -7,7 +7,7 @@ export interface CardAProps {
 
 const CardA: React.FC<CardAProps> = ({ title, imageUrl, children, role }) => {
   return (
-    <div className="flex flex-col gap-[10px] h-[379px]">
+    <div className="flex flex-col gap-[10px] w-[255px] h-[379px]">
       {imageUrl && <img className="w-full h-[321px]" src={imageUrl} alt={title} />}
       
       <div className="flex flex-col gap-[12px] text-center">

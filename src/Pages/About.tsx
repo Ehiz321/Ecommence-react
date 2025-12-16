@@ -1,6 +1,6 @@
 import useMediaQuery from "../hooks/useMediaquery.ts"
 import { images } from "../assets/Images.tsx"
-import {team} from "../Data/Data.tsx"
+import {team, cup, mug, blueplate} from "../Data/Data.tsx"
 import Button from "../Components/Ui/Button.tsx"
 import SubCardA from "../Components/Ui/SubCardA"
 import SubCardRA from "../Components/Ui/SubCardRA"
@@ -14,7 +14,7 @@ const About: React.FC<AboutProps> = ({}) => {
     return (
       <section>
         {isAboveMediumScreens ? (
-            <div className="w-[1440px] px-[165px]">
+            <div className="w-auto px-[105px]">
                 <div className="bg-background-primary h-[224px] flex flex-col items-center justify-center gap-[30px]">
                     <div className="text-center">
                         <h1 className="text-[36px] text-text-primary font-bold font-[garamond]">ABOUT MOON</h1>
@@ -22,9 +22,27 @@ const About: React.FC<AboutProps> = ({}) => {
                     </div>
                 </div>
                 <div className=" flex flex-col mb-[70px]">
-                    <SubCardA title="1910" description="Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices." imageUrl={images.cup}></SubCardA>
-                    <SubCardRA title="1990" description="Maecenas sem eros, rutrum vitae risus eget, vulputate aliquam nisi. dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit " imageUrl={images.mug}></SubCardRA>
-                    <SubCardA title="2010" description="Rutrum vitae risus eget, vulputate aliquam nisi ex gravida neque tempus. sit aliquam sit nullam neque ultrices. " imageUrl={images.blueplate}></SubCardA>
+                    {cup.map((item, index) =>(
+                    <SubCardA
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        imageUrl={item.img}/>
+                    ))}
+                    {mug.map((item, index) =>(
+                    <SubCardRA
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        imageUrl={item.img}/>
+                    ))}
+                    {blueplate.map((item, index) =>(
+                    <SubCardA
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        imageUrl={item.img}/>
+                    ))}
                 </div>
                 <div className="flex h-[400px]">
                     <img src={images.crafting} alt="crafting" className="w-[555px]"/>
@@ -70,9 +88,27 @@ const About: React.FC<AboutProps> = ({}) => {
                     </div>
                 </div>
                 <div className="">
-                    <SubCardA title="1910" description="Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices." imageUrl={images.cup} ></SubCardA>
-                    <SubCardA title="1990" description="Maecenas sem eros, rutrum vitae risus eget, vulputate aliquam nisi. dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit" imageUrl={images.mug} ></SubCardA>
-                    <SubCardA title="2010" description="Rutrum vitae risus eget, vulputate aliquam nisi ex gravida neque tempus. sit aliquam sit nullam neque ultrices." imageUrl={images.blueplate} ></SubCardA>
+                    {cup.map((item, index) =>(
+                    <SubCardA
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        imageUrl={item.img}/>
+                    ))}
+                    {mug.map((item, index) =>(
+                    <SubCardA
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        imageUrl={item.img}/>
+                    ))}
+                    {blueplate.map((item, index) =>(
+                    <SubCardA
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        imageUrl={item.img}/>
+                    ))}
                 </div>
                 <div>
                     <img src={images.crafting} alt="crafting" className="w-full"/>
@@ -93,12 +129,19 @@ const About: React.FC<AboutProps> = ({}) => {
                 <div className="h-[535px] py-[36px]">
                     <h1 className="text-[36px] text-center font-bold font-[garamond]">MEET OUR TEAM</h1>
                     <div className="size-[48px]"></div>
-                    <div className="flex gap-[20px] h-[379px] pl-[20px] ">
-                        <CardA title="BERNIE PATTERSON" role="CEO & Founder" imageUrl={images.bernie}></CardA>
-                        <CardA title="OPHELIA" role="Creative" imageUrl={images.opheli}></CardA>
+                    <div className="bg-background-primary h-[379px] px-[20px] flex overflow-x-scroll scrollbar-hide">
+                        <div className="flex gap-[20px] ">
+                            {team.map ((item, index) => (
+                                <CardA
+                                    key={index}
+                                    title={item.title}
+                                    role={item.role}
+                                    imageUrl={item.img}/>
+                            ))}
+                        </div>
                     </div>
-
                 </div>
+
                 <div className="bg-background-primary flex flex-col items-center justify-center text-center h-[315px] p-[40px]">
                       <p className="text-[16px] text-text-tertiary font-semibold">Sign up for emails</p>
                       <div className="size-[24px]"></div>

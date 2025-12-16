@@ -1,6 +1,6 @@
 import { images, icons } from "../assets/Images.tsx"
 import useMediaQuery from "../hooks/useMediaquery.ts"
-import { blog } from "../Data/Data.tsx"
+import { blog, blogleft, blogright } from "../Data/Data.tsx"
 import BlogCard from "../Components/Ui/BlogCard.tsx"
 
 export interface BlogProps {}
@@ -11,29 +11,41 @@ const Blog: React.FC<BlogProps> = ({}) => {
     return (
       <section>
         {isAboveMediumScreens ? (
-            <div className="w-[1440px] py-[80px] px-[165px]">
+            <div className="w-auto">
                 <div className="w-full flex">
-                    <img className="w-[570px] h-[429px]" src={images.birdcupd}/>
+                    <img className="w-[625px] h-[429px]" src={images.birdcupd}/>
                     <div className="bg-background-secondary w-full h-[429px] flex flex-col items-center justify-center gap-6">
                         <div className="text-center flex flex-col gap-[10px] px-[80px]">
-                            <h1 className="text-[28px] font-bold font-[garamond] text-text-primary tracking-[.30rem]">WHAT'S IN A GARDEN SET?</h1>
+                            <h1 className="text-[28px] font-bold font-[garamond] text-text-primary tracking-[0.04rem]">WHAT'S IN A GARDEN SET?</h1>
                             <p className="text-[16px] text-text-secondary">Maecenas sem eros, rutrum vitae risus eget, vulputate aliquam nisi. dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit </p>
                         </div>
                     </div> 
                 </div>
 
-                <div className="grid grid-cols-[2fr,1fr] gap-[30px] py-[80px]">
+                <div className="grid grid-cols-[2fr,1fr] py-[50px] px-[105px] gap-[12px]">
                     <div>
-                        <div className="grid grid-cols-2 gap-[30px]">
+                        <div className="flex gap-[12px] ">
                             <div className="flex flex-col gap-[30px]">
-                                <BlogCard imageUrl={images.cups} icon={icons.profile} title="How Can I Use Ceramic When I Decorate?" description="Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices."></BlogCard>
-                                <BlogCard imageUrl={images.pcup} icon={icons.profile} title="How to Style a Beautiful House" description="Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam .Vulputate aliquam nisi. dolor sit amet consectetur adipiscing eli mattis sit phasellus."></BlogCard>
-                                <BlogCard imageUrl={images.chococake} icon={icons.profile} title="Chocolate Clementine Cake Recipe" description=" Vulputate aliquam nisi. dolor sit amet consectetur adipiscing eli mattis sit phasellus."></BlogCard>
+                            {blogleft.map((item, index) => (
+                                <BlogCard
+                                key={index}
+                                title={item.title}
+                                description={item.description}
+                                icon={item.icon}
+                                imageUrl={item.img}
+                                />
+                            ))}
                             </div>
-                            <div className="flex flex-col gap-[30px]">
-                                <BlogCard imageUrl={images.flowerg} icon={icons.profile} title="The secrets to a Living Room set?" description="Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis."></BlogCard>
-                                <BlogCard imageUrl={images.flowerw} icon={icons.profile} title="The secrets to a Living Room set?" description="Maecenas sem eros, rutrum vitae risus eget, vulputate aliquam nisi."></BlogCard>
-                                <BlogCard imageUrl={images.cutlery} icon={icons.profile} title="Holiday Food Traditions With Moon Family" description="Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam ."></BlogCard>
+                            <div className="flex flex-col">
+                            {blogright.map((item, index) => (
+                                <BlogCard
+                                key={index}
+                                title={item.title}
+                                description={item.description}
+                                icon={item.icon}
+                                imageUrl={item.img}
+                                />
+                            ))}
                             </div>
                         </div>
                         <div className="text-text-primary text-[14px] flex gap-[2px] mt-[30px] justify-center">
@@ -46,7 +58,7 @@ const Blog: React.FC<BlogProps> = ({}) => {
                         </div>
 
                     </div>
-                    <div className="w-[346px]">
+                    <div className="">
                         <div className="text-text-primary grid gap-[40px]">
                             <div>
                                 <input type="text" placeholder="Search for product..." className="border-text-primary border-2 w-[346px] h-[48px] placeholder:text-text-tertiary placeholder:text-[14px] placeholder:pl-[45px] rounded-none"/>

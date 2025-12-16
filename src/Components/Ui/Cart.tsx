@@ -16,7 +16,7 @@ const Cart: React.FC<CartProps> = ({  title, imageUrl, icon, price, subtotal, ch
   return (
     <div>
       {isAboveMediumScreens ? (
-        <div className="flex items-center gap-[10px] w-[1110px] h-[181px] border-b-[1px] border-text-primary py-[20px] text-text-primary text-[14px]">
+        <div className="flex items-center gap-[10px] w-auto h-[181px] border-b-[1px] border-text-primary py-[20px] text-text-primary text-[14px]">
             <div className="flex justify-center w-[50px] h-[20px]">{icon && <img className="size-[20px]" src={icon} />}</div>
             {imageUrl && <img className="w-[120px] h-full" src={imageUrl} alt={title} />}
             <div className="font-semibold tracking-[0.06rem] flex justify-center w-[400px]">{title}</div>

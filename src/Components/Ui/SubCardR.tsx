@@ -10,7 +10,7 @@ export interface SubCardRProps {
 const SubCardR: React.FC<SubCardRProps> = ({ title, imageUrl, description, children }) => {
   return (
     <div>
-        <div className=" flex w-[1110px] h-[348px]">
+        <div className=" flex w-auto h-[348px]">
            {imageUrl && <img className="w-[555px] h-[348px] " src={imageUrl} alt={title} />}
             <div className="bg-background-secondary w-[555px] h-[348px] flex flex-col items-center justify-center gap-[30px]">
               <div className="text-center flex flex-col gap-[10px] px-[80px]">

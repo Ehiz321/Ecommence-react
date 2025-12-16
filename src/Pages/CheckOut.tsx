@@ -10,7 +10,7 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
   return (
     <section>
       {isAboveMediumScreens ? ( 
-        <div className="flex flex-col gap-[50px] w-[1440px] pt-[20px] pb-[80px] px-[165px]">
+        <div className="flex flex-col gap-[50px] w-auto pt-[20px] pb-[80px] px-[105px]">
             <div className="flex gap-[10px]">
                 <span className="text-text-tertiary">Home</span>
                 <span className="text-text-tertiary">/</span>
@@ -40,15 +40,16 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                         </div>
                         <div className="flex flex-col gap-[12px]">
                           <label className="font-semibold text-[14px]">Country / Region *</label>
-                          <input type="text" placeholder="United states" className="w-[323px] h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                          <img src={icons.down} className="absolute h-[12px] ml-[290px] mt-[53px]"/>
+                          <select className="w-[323px] h-[48px] border-text-primary border px-[16px] text-[14px] text-text-tertiary"> 
+                            <option>United States</option>
+                          </select>
                         </div>
                       </div>
 
-                        <div className="flex flex-col gap-[12px]">
-                          <label className="font-semibold text-[14px]">Street address *</label>
-                          <input type="text" placeholder="Address" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                        </div>
+                      <div className="flex flex-col gap-[12px]">
+                        <label className="font-semibold text-[14px]">Street address *</label>
+                        <input type="text" placeholder="Address" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
+                      </div>
                       <div className="flex gap-[20px]">
                         <div className="flex flex-col gap-[12px]">
                           <label className="font-semibold text-[14px]">Town / City *</label>
@@ -56,37 +57,38 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                         </div>
                         <div className="flex flex-col gap-[12px]">
                           <label className="font-semibold text-[14px]">State *</label>
-                          <input type="text" placeholder="State" className="w-[323px] h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                          <img src={icons.down} className="absolute h-[12px] ml-[290px] mt-[53px]"/>
+                          <select className="w-[323px] h-[48px] border-text-primary border px-[16px] text-[14px] text-text-tertiary"> 
+                            <option>State</option>
+                          </select>  
                         </div>
                       </div>
 
-                        <div className="flex flex-col gap-[12px]">
-                          <label className="font-semibold text-[14px]">ZIP Code</label>
-                          <input type="text" placeholder="Zip code" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                        </div>
-                        <div className="flex flex-col gap-[12px]">
-                          <label className="font-semibold text-[14px]">Phone *</label>
-                          <input type="text" placeholder="(123) 456 - 7890" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                        </div>
-                        <div className="flex flex-col gap-[12px]">
-                          <label className="font-semibold text-[14px]">Email</label>
-                          <input type="text" placeholder="example@youremail.com" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                        </div>
-                        <div className="flex flex-col gap-[12px]">
-                          <label className="font-semibold text-[14px]">Order notes</label>
-                          <input type="text" placeholder="Type your message here" className="w-full h-[128px] border-text-primary border pb-[100px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                        </div>
+                      <div className="flex flex-col gap-[12px]">
+                        <label className="font-semibold text-[14px]">ZIP Code</label>
+                        <input type="text" placeholder="Zip code" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
+                      </div>
+                      <div className="flex flex-col gap-[12px]">
+                        <label className="font-semibold text-[14px]">Phone *</label>
+                        <input type="text" placeholder="(123) 456 - 7890" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
+                      </div>
+                      <div className="flex flex-col gap-[12px]">
+                        <label className="font-semibold text-[14px]">Email</label>
+                        <input type="text" placeholder="example@youremail.com" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
+                      </div>
+                      <div className="flex flex-col gap-[12px]">
+                        <label className="font-semibold text-[14px]">Order notes</label>
+                        <input type="text" placeholder="Type your message here" className="w-full h-[128px] border-text-primary border pb-[100px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
+                      </div>
 
-                        <div className="flex justify-between">
-                            <div className="flex justify-start items-center gap-[8px] w-[333px]">
-                                <img src={icons.left} className="size-[10px]"/>
-                                <span className="font-semibold text-[12px] tracking-[0.08rem]">RETURN TO CART</span>
-                            </div>
-                            <div className="w-[333px]">
-                                <Button type="tertiary" size="full">CONTINUE TO SHIPPING <img src={icons.arrowright}/></Button>
-                            </div>
-                        </div>
+                      <div className="flex justify-between">
+                          <div className="flex justify-start items-center gap-[8px] w-[333px]">
+                              <img src={icons.left} className="size-[10px]"/>
+                              <span className="font-semibold text-[12px] tracking-[0.08rem]">RETURN TO CART</span>
+                          </div>
+                          <div className="w-[333px]">
+                              <Button type="tertiary" size="full">CONTINUE TO SHIPPING <img src={icons.arrowright}/></Button>
+                          </div>
+                      </div>
                     </div>
 
                 </div>
@@ -182,8 +184,9 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                     </div>
                     <div className="flex flex-col gap-[12px]">
                       <label className="font-semibold text-[14px]">Country / Region *</label>
-                      <input type="text" placeholder="United states" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                      <img src={icons.down} className="absolute h-[12px] ml-[350px] mt-[53px]"/>
+                      <select className="w-full h-[48px] border-text-primary border px-[16px] text-[14px] text-text-tertiary"> 
+                        <option>United States</option>
+                      </select>
                     </div>
                     <div className="flex flex-col gap-[12px]">
                       <label className="font-semibold text-[14px]">Street address *</label>
@@ -195,8 +198,9 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                     </div>
                     <div className="flex flex-col gap-[12px]">
                       <label className="font-semibold text-[14px]">State *</label>
-                      <input type="text" placeholder="State" className="w-full h-[48px] border-text-primary border py-[21px] px-[16px] placeholder:text-[14px] placeholder:text-text-tertiary"/>
-                      <img src={icons.down} className="absolute h-[12px] ml-[350px] mt-[53px]"/>
+                      <select className="w-full h-[48px] border-text-primary border px-[16px] text-[14px] text-text-tertiary"> 
+                        <option>State</option>
+                      </select>
                     </div>
                     <div className="flex flex-col gap-[12px]">
                       <label className="font-semibold text-[14px]">ZIP Code</label>
@@ -255,9 +259,9 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                       <span className="text-[14px]">$15.00</span>
                     </div>
                   </div>
-                   <div className="pt-[20px] h-[35px] flex justify-between border-t font-semibold ">
-                      <span className="font-semibold text-[20px]">Total</span>
-                      <span className="font-semibold text-[20px]">$490.00</span>
+                  <div className="pt-[20px] h-[35px] flex justify-between border-t font-semibold ">
+                    <span className="font-semibold text-[20px]">Total</span>
+                    <span className="font-semibold text-[20px]">$490.00</span>
                   </div>
                 </div>
                 <div className="flex flex-col gap-[10px] p-[30px] bg-text-primary text-background-primary">
@@ -283,7 +287,6 @@ const CheckOut: React.FC<CheckOutProps> = ({}) => {
                     <img src={icons.paypal}/>
                   </div>
                   <Button type="footer" size="full">PLACE ORDER</Button>
-
                 </div>
             </div>
 

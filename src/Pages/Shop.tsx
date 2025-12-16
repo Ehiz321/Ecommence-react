@@ -11,7 +11,7 @@ const Shop: React.FC<ShopProps> = ({}) => {
   return (
     <section>
       {isAboveMediumScreens ? ( 
-        <div className="w-[1440px] pt-[20px] pb-[60px] px-[165px] gap-[50px]">
+        <div className="w-auto pt-[20px] pb-[60px] px-[105px] gap-[50px]">
           <div className="flex gap-[15px] mb-[40px] mt-[20px] text-[14px]">
             <span className="text-text-tertiary">Home</span> 
             <span className="text-text-primary">/</span>

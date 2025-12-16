@@ -1,4 +1,5 @@
-import { images, icons } from "../assets/Images.tsx"
+import { icons } from "../assets/Images.tsx"
+import { cart } from "../Data/Data.tsx"
 import CartCard from "../Components/Ui/Cart.tsx"
 import Button from "../Components/Ui/Button.tsx"
 import useMediaQuery from "../hooks/useMediaquery.ts"
@@ -11,7 +12,7 @@ const Cart: React.FC<CartProps> = ({}) => {
   return (
     <section>
       {isAboveMediumScreens ? ( 
-        <div className="flex flex-col gap-[50px] w-[1440px] pt-[20px] pb-[80px] px-[165px]">
+        <div className="flex flex-col gap-[50px] w-auto pt-[20px] pb-[80px] px-[105px]">
             <div className="flex gap-[10px]">
               <span className="text-text-tertiary">Home</span>
               <span className="text-text-primary">/</span>
@@ -29,9 +30,16 @@ const Cart: React.FC<CartProps> = ({}) => {
                   <div className="w-[180px] h-[20px] flex justify-center">SUBTOTAL</div>
                 </div>
                 <div>
-                  <CartCard title="PORCELAIN DINNER PLATE (27CM)" icon={icons.close} imageUrl={images.mariblue} price="$59" subtotal="$98"/>
-                  <CartCard title="OPHELIA MATTE NATRUAL VASE" icon={icons.close} imageUrl={images.valovase} price="$168" subtotal="$168"/>
-                  <CartCard title="PORCELAIN DINNER PLATE" icon={icons.close} imageUrl={images.julo} price="$70" subtotal="$70"/>
+                  {cart.map((item, index) => (
+                    <CartCard
+                      key={index}
+                      title={item.title}
+                      icon={icons.close}
+                      price={item.price}
+                      subtotal={item.subtotal}
+                      imageUrl={item.img}
+                    />
+                  ))}
                 </div>
               </div>
               <div className="flex justify-between">
@@ -70,9 +78,16 @@ const Cart: React.FC<CartProps> = ({}) => {
             <div className="flex flex-col gap-[40px]">
               <span className="text-[24px] text-text-primary font-semibold">Cart (3 item)</span>
               <div>
-                <CartCard title="PORCELAIN DINNER PLATE (27CM)" icon={icons.close} imageUrl={images.mariblue} price="$59" subtotal="$98"/>
-                <CartCard title="OPHELIA MATTE NATRUAL VASE" icon={icons.close} imageUrl={images.valovase} price="$168" subtotal="$168"/>
-                <CartCard title="PORCELAIN DINNER PLATE" icon={icons.close} imageUrl={images.julo} price="$70" subtotal="$70"/>
+                  {cart.map((item, index) => (
+                    <CartCard
+                      key={index}
+                      title={item.title}
+                      icon={icons.close}
+                      price={item.price}
+                      subtotal={item.subtotal}
+                      imageUrl={item.img}
+                    />
+                  ))}
               </div>
             </div>
             <div className="flex flex-col gap-[10px]">
