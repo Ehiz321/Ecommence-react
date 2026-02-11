@@ -1,4 +1,4 @@
-import { images, icons } from "../assets/Images"; 
+import { images, icons } from "../assets/Images";
 
 export const title = [
   { title: "UP TO 40% OFF OUR CHRISTMAS COLLECTION", description: "Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.", img: images.threeplates},
@@ -17,13 +17,13 @@ export const subr = [
 ]
 
 export const cup = [
-  {title: "1910", description: "Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.", img: images.cup }
+  { title: "1910", description: "Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.", img: images.cup }
 ]
 export const mug = [
-  {title: "1990", description: "Maecenas sem eros, rutrum vitae risus eget, vulputate aliquam nisi. dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit.", img: images.mug }
+  { title: "1990", description: "Maecenas sem eros, rutrum vitae risus eget, vulputate aliquam nisi. dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit.", img: images.mug }
 ]
 export const blueplate = [
-  {title: "2010", description: "Rutrum vitae risus eget, vulputate aliquam nisi ex gravida neque tempus. sit aliquam sit nullam neque ultrices.", img: images.blueplate }
+  { title: "2010", description: "Rutrum vitae risus eget, vulputate aliquam nisi ex gravida neque tempus. sit aliquam sit nullam neque ultrices.", img: images.blueplate }
 ]
 
 export const categories = [
@@ -104,3 +104,38 @@ export const cart = [
   { title: "OPHELIA MATTE NATURAL VASE", img: images.valovase, price: "$168", subtotal: "$168" },
   { title: "PORCELAIN DINNER PLATE", img: images.julo, price: "$70", subtotal: "$70" },
 ];
+
+export const worksteps = [
+  { title: "Product design", description: "Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis."},
+  { title: "Crafted", description: "Rutrum vitae risus eget, vulputate aliquam nisi ex gravida neque tempus."},
+  { title: "Sell product", description :"Maecenas sem eros, rutrum vitae risus eget, vulputate aliquam nisi."},
+];
+export const aboutmoon = [
+  { description: "Moon's handmade ceramic products have been around ."},
+  { description :"since 1650, let's explore our journey."},
+];
+export const popularposts = [
+  { title: "What’s in a Garden set?", img: images.birdcup},
+  { title: "How Can I Use Ceramic When I Decorate?", img: images.cups},
+  { title: "The secrets to a Living Room set?", img: images.flowerg},
+]
+export const tagspost1 = [
+  { title: "Ceramic"},
+  { title: "Kitchen"},
+  { title: "Gifts sets"},
+  { title: "Lamp"},
+]
+export const tagspost2 = [
+  { title: "Flower vase"},
+  { title: "Plate"},
+  { title: "Kitchen"},
+]
+export const cartitem = [
+  { icon: icons.trash},
+  { title: "PHOTO"},
+  { title: "PRODUCT"},
+  { title: "PRICE"},
+  { title: "QUALITY"},
+  { title: "SUBTOTAL"},
+]
+

@@ -1,6 +1,7 @@
 import { images, icons } from "../assets/Images.tsx"
 import useMediaQuery from "../hooks/useMediaquery.ts"
-import { blog, blogleft, blogright } from "../Data/Data.tsx"
+import { blog, blogleft, blogright, popularposts, tagspost1, tagspost2 } from "../Data/Data.tsx"
+import { categories} from "../Data/List.tsx"
 import BlogCard from "../Components/Ui/BlogCard.tsx"
 
 export interface BlogProps {}
@@ -59,48 +60,47 @@ const Blog: React.FC<BlogProps> = ({}) => {
 
                     </div>
                     <div className="">
-                        <div className="text-text-primary grid gap-[40px]">
+                        <div className="text-text-primary flex flex-col gap-[40px]">
                             <div>
                                 <input type="text" placeholder="Search for product..." className="border-text-primary border-2 w-[346px] h-[48px] placeholder:text-text-tertiary placeholder:text-[14px] placeholder:pl-[45px] rounded-none"/>
                                 <img src={icons.search} className="-mt-[33px] ml-[15px]"/>
                             </div>
                             <h1 className="text-[24px] font-bold tracking-[.10rem]">POPULAR POSTS</h1>
-                            <div className="flex">
-                                <img src={images.birdcup} className="w-[119px] h-[80px]" />
-                                <p className="pt-[30px] pl-[25px]">What’s in a Garden set?</p>
-                            </div>
-                            <div className="flex">
-                                <img src={images.cups} className="w-[119px] h-[80px]" />
-                                <p className="pt-[30px] pl-[25px]">How Can I Use Ceramic When I Decorate?</p>
-                            </div>
-                            <div className="flex">
-                                <img src={images.flowerg} className="w-[119px] h-[80px]" />
-                                <p className="pt-[30px] pl-[25px]">The secrets to a Living Room set?</p>
-                            </div>
+                            {popularposts.map((item, index) => (
+                                <div key={index} className="flex gap-[20px]">
+                                    <img src={item.img} className="w-[119px] h-[80px]" />
+                                    <span className="flex items-center">{item.title}</span>
+                                </div>
+                            ))}
 
-                            <div className="grid gap-[30px]">
+
+                            <div className="flex flex-col gap-[30px]">
                                 <h1 className="text-[24px] font-bold tracking-[.10rem]">CATEGORIES</h1>
-                                <ul className="text-text-senary grid gap-[10px]">
-                                    <li>Dinnerware (3)</li>
-                                    <li>Ceramic (5)</li>
-                                    <li>Furniture (7)</li>
-                                    <li>Decor Art (2)</li>
-                                    <li>Gifts sets (8)</li>
+                                <ul className="text-text-senary flex flex-col gap-[10px]">
+                                    {categories.map((item, index) => (
+                                        <li key={index}>
+                                             {item.name} ({item.count})
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
-                            <div className="grid gap-[30px]">
+                            <div className="flex flex-col gap-[30px]">
                                 <h1 className="text-[24px] font-bold tracking-[.10rem]">TAGS POST</h1>
                                 <div className="text-text-tertiary text-[14px] flex gap-[10px]">
-                                    <span className="border-text-tertiary border-2 p-[8px]">Ceramic</span>
-                                    <span className="border-text-tertiary border-2 p-[8px]">Kitchen</span>
-                                    <span className="border-text-tertiary border-2 p-[8px]">Gifts sets</span>
-                                    <span className="border-text-tertiary border-2 p-[8px]">Lamp</span>
-                                </div>
-                                <div className="text-text-tertiary text-[14px] flex gap-[10px] -mt-[20px]">
-                                    <span className="border-text-tertiary border-2 p-[8px]">Flower vase</span>
-                                    <span className="border-text-tertiary border-2 p-[8px]">Plate</span>
-                                    <span className="border-text-tertiary border-2 p-[8px]">Kitchen</span>
-                                </div>
+                                    {tagspost1.map((item, index) => (
+                                        <div key={index}>
+                                            <span className="border-text-tertiary border p-[8px]">{item.title}</span>
+                                        </div>
+                                    ))}
+                                </div>     
+                                <div className="text-text-tertiary text-[14px] flex gap-[10px]">
+                                    {tagspost2.map((item, index) => (
+                                        <div key={index}>
+                                            <span className="border-text-tertiary border p-[8px]">{item.title}</span>
+                                        </div>
+                                    ))}
+                                </div>     
+                                
                             </div>
                         </div>
                     </div>
@@ -140,46 +140,41 @@ const Blog: React.FC<BlogProps> = ({}) => {
                 <div className="text-text-primary flex flex-col py-[40px] px-[20px] gap-[60px]">
                     <div className="flex flex-col gap-[40px]">
                         <h1 className="text-[24px] font-semibold tracking-[0.06rem]">POPULAR POSTS</h1>
-                        <div className="flex flex-col gap-[20px] ">
-                            <div className="flex gap-[20px]">
-                                <img src={images.birdcup} className="w-[119px] h-[80px]" />
-                                <p className="flex items-center">What’s in a Garden set?</p>
-                            </div>
-                            <div className="flex gap-[20px]">
-                                <img src={images.cups} className="w-[119px] h-[80px]" />
-                                <p className="flex items-center">How Can I Use Ceramic When I Decorate?</p>
-                            </div>
-                            <div className="flex gap-[20px]">
-                                <img src={images.flowerg} className="w-[119px] h-[80px]" />
-                                <p className="flex items-center">The secrets to a Living Room set?</p>
-                            </div>
-                        </div>
+                            {popularposts.map((item, index) => (
+                                <div key={index} className="flex gap-[20px]">
+                                    <img src={item.img} className="w-[119px] h-[80px]" />
+                                    <span className="flex items-center">{item.title}</span>
+                                </div>
+                            ))}                    
                     </div>
 
                     <div className="flex flex-col gap-[40px]">
                         <h1 className="text-[24px] font-semibold tracking-[0.06rem]">CATEGORIES</h1>
-                        <ul className="text-text-senary flex flex-col gap-[20px]">
-                            <li>Dinnerware (3)</li>
-                            <li>Ceramic (5)</li>
-                            <li>Furniture (7)</li>
-                            <li>Decor Art (2)</li>
-                            <li>Gifts sets (8)</li>
-                        </ul>
+                            <ul className="text-text-senary flex flex-col gap-[20px]">
+                                {categories.map((item, index) => (
+                                    <li key={index}>
+                                            {item.name} ({item.count})
+                                    </li>
+                                ))}
+                            </ul>
                     </div>
                     <div className="flex flex-col gap-[40px]">
                         <h1 className="text-[24px] font-semibold tracking-[0.06rem]">TAGS POST</h1>
-                        <div className="flex flex-col gap-[10px]">
-                            <div className="text-text-tertiary text-[14px] flex gap-[10px]">
-                                <span className="border-text-tertiary border-2 p-[8px]">Ceramic</span>
-                                <span className="border-text-tertiary border-2 p-[8px]">Kitchen</span>
-                                <span className="border-text-tertiary border-2 p-[8px]">Gifts sets</span>
-                                <span className="border-text-tertiary border-2 p-[8px]">Lamp</span>
-                            </div>
-                            <div className="text-text-tertiary text-[14px] flex gap-[10px]">
-                                <span className="border-text-tertiary border-2 p-[8px]">Flower vase</span>
-                                <span className="border-text-tertiary border-2 p-[8px]">Plate</span>
-                                <span className="border-text-tertiary border-2 p-[8px]">Kitchen</span>
-                            </div>
+                        <div className="flex flex-col gap-[30px]">
+                                <div className="text-text-tertiary text-[14px] flex gap-[10px]">
+                                    {tagspost1.map((item, index) => (
+                                        <div key={index}>
+                                            <span className="border-text-tertiary border p-[8px]">{item.title}</span>
+                                        </div>
+                                    ))}
+                                </div>     
+                                <div className="text-text-tertiary text-[14px] flex gap-[10px]">
+                                    {tagspost2.map((item, index) => (
+                                        <div key={index}>
+                                            <span className="border-text-tertiary border p-[8px]">{item.title}</span>
+                                        </div>
+                                    ))}
+                                </div>
                         </div>
                     </div>
                 </div>

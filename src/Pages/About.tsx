@@ -1,6 +1,6 @@
 import useMediaQuery from "../hooks/useMediaquery.ts"
 import { images } from "../assets/Images.tsx"
-import {team, cup, mug, blueplate} from "../Data/Data.tsx"
+import {team, cup, mug, blueplate, worksteps, aboutmoon} from "../Data/Data.tsx"
 import Button from "../Components/Ui/Button.tsx"
 import SubCardA from "../Components/Ui/SubCardA"
 import SubCardRA from "../Components/Ui/SubCardRA"
@@ -18,7 +18,11 @@ const About: React.FC<AboutProps> = ({}) => {
                 <div className="bg-background-primary h-[224px] flex flex-col items-center justify-center gap-[30px]">
                     <div className="text-center">
                         <h1 className="text-[36px] text-text-primary font-bold font-[garamond]">ABOUT MOON</h1>
-                        <p className="text-[16px] text-text-secondary">Moon's handmade ceramic products have been around <br /> since 1650, let's explore our journey</p> 
+                        {aboutmoon.map((item, index) => (
+                            <div key={index}>
+                            <p className="text-[16px] text-text-secondary">{item.description}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div className=" flex flex-col mb-[70px]">
@@ -49,12 +53,12 @@ const About: React.FC<AboutProps> = ({}) => {
                     <div className="text-text-primary py-[36px] px-[45px] w-[550.5px]">
                         <h1 className="text-[28px] font-[garamond] font-bold mb-[10px]">HOW WE WORKS</h1>
                         <div className="flex flex-col gap-[5px]">
-                            <p className="font-bold text-[18px]">Product design</p>
-                            <p className="text-text-secondary">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis.</p>
-                            <p className="font-bold text-[18px]">Crafted</p>
-                            <p className="text-text-secondary">Rutrum vitae risus eget, vulputate aliquam nisi ex gravida neque tempus.</p>
-                            <p className="font-bold text-[18px]">Sell product</p>
-                            <p className="text-text-secondary">Maecenas sem eros, rutrum vitae risus eget, vulputate aliquam nisi.</p>
+                            {worksteps.map((item, index) => (
+                                <div key={index}>
+                                <p className="font-bold text-[18px]">{item.title}</p>
+                                <p className="text-text-secondary">{item.description}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -84,7 +88,11 @@ const About: React.FC<AboutProps> = ({}) => {
                     <div className="flex flex-col justify-center items-center text-center w-[390px] h-[248px] py-[64px]">
                         <h1 className="text-[36px] text-text-primary font-bold font-[garamond]">ABOUT MOON</h1>
                         <div className="size-[24px]"></div>
-                        <p className="text-[16px] text-text-secondary w-[309px]">Moon's handmade ceramic products have been around since 1650, let's explore our journey</p> 
+                        {aboutmoon.map((item, index) => (
+                            <div key={index}>
+                            <p className="text-[16px] text-text-secondary">{item.description}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div className="">
@@ -116,12 +124,12 @@ const About: React.FC<AboutProps> = ({}) => {
                         <h1 className="text-[28px] font-[garamond] font-bold tracking-[0.04rem]">HOW WE WORKS</h1>
                         <div className="size-[24px]"></div>
                         <div className="flex flex-col gap-[5px]">
-                            <p className="font-semibold text-[18px]">Product design</p>
-                            <p className="text-text-secondary">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis.</p>
-                            <p className="font-semibold text-[18px]">Crafted</p>
-                            <p className="text-text-secondary">Rutrum vitae risus eget, vulputate aliquam nisi ex gravida neque tempus.</p>
-                            <p className="font-semibold text-[18px]">Sell product</p>
-                            <p className="text-text-secondary">Maecenas sem eros, rutrum vitae risus eget, vulputate aliquam nisi.</p>
+                            {worksteps.map((item, index) => (
+                                <div key={index}>
+                                <p className="font-bold text-[18px]">{item.title}</p>
+                                <p className="text-text-secondary">{item.description}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
